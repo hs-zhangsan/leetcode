@@ -31,14 +31,18 @@
  *     struct ListNode *next;
  * };
  */
-bool hasCycle(struct ListNode *head) {
-    if (head == NULL || head->next == NULL) {
+bool hasCycle(struct ListNode *head)
+{
+    if (head == NULL || head->next == NULL)
+    {
         return false;
     }
 
-    struct ListNode* fast = head, * slow = head;
-    do {
-        if (fast == NULL || fast->next == NULL) {
+    struct ListNode *fast = head, *slow = head;
+    do
+    {
+        if (fast == NULL || fast->next == NULL)
+        {
             return false;
         }
         fast = fast->next->next;
